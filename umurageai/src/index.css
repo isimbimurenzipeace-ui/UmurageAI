@@ -1,0 +1,26 @@
+:root {
+  --brown:       #7F4F24;
+  --brown-light: #C28048;
+  --brown-pale:  #FDF6EF;
+  --green:       #3B6D11;
+  --green-light: #639922;
+  --green-pale:  #EAF3DE;
+  --cream:       #FFF8F0;
+  --text-dark:   #2C1A0E;
+  --text-mid:    #6B4226;
+  --text-muted:  #9C7A5A;
+  --border:      #E8D5C0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FDF6EF;
+  color: #2C1A0E;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+}
