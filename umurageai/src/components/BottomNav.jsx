@@ -24,16 +24,23 @@ export default function BottomNav() {
     setUnread(count || 0)
   }
 
-  const navItems = [
+  const elderNav = [
     { path: '/community', label: t.community, icon: '🌍' },
     { path: '/record', label: t.record, icon: '🎤' },
     { path: '/family', label: t.family, icon: '🏡' },
     { path: '/notifications', label: 'Alerts', icon: '🔔', badge: unread },
-    {
-      path: profileType === 'elder' ? '/profile/elder' : '/profile/youth',
-      label: t.profile, icon: '👤'
-    },
+    { path: '/profile/elder', label: t.profile, icon: '👤' },
   ]
+
+  const youthNav = [
+    { path: '/community', label: t.community, icon: '🌍' },
+    { path: '/ask', label: 'Ask AI', icon: '🤖' },
+    { path: '/family', label: t.family, icon: '🏡' },
+    { path: '/notifications', label: 'Alerts', icon: '🔔', badge: unread },
+    { path: '/profile/youth', label: t.profile, icon: '👤' },
+  ]
+
+  const navItems = profileType === 'elder' ? elderNav : youthNav
 
   return (
     <nav style={styles.nav}>
